@@ -1,13 +1,190 @@
-:root{
---White: hsl(0, 0%, 100%);
---Stone100: hsl(30, 54%, 90%) ;
---Stone150: hsl(30, 18%, 87%) ;
---Stone600: hsl(30, 10%, 34%) ;
---Stone900: hsl(24, 5%, 18%) ;
---Brown800: hsl(14, 45%, 36%) ;
---Rose800: hsl(332, 51%, 32%);
---Rose50: hsl(330, 100%, 98%);
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%);
+  --Stone900: hsl(24, 5%, 18%);
+  --Brown800: hsl(14, 45%, 36%);
+  --Rose800: hsl(332, 51%, 32%);
+  --Rose50: hsl(330, 100%, 98%);
 }
-*{
-    box-sizing: border-box;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: var(--Stone600);
+  background-color: var(--Stone100);
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 740px;
+  width: 100%;
+}
+
+.card {
+  background: var(--White);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-family: 'Young Serif', serif;
+  font-size: 2.5rem;
+  color: var(--Stone900);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  color: var(--Brown800);
+  margin-bottom: 1rem;
+}
+
+.preparation {
+  background: var(--Rose50);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.preparation h2 {
+  color: var(--Rose800);
+  margin-bottom: 0.75rem;
+}
+
+.preparation ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.preparation li {
+  color: var(--Stone600);
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  color: var(--Stone600);
+  margin-bottom: 0.5rem;
+}
+
+/* Professional bullet dots */
+ul li::marker {
+  color: var(--Brown800);
+  font-size: 0.9rem;
+}
+
+.instructions {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  color: var(--Stone600);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.instructions li::marker {
+  color: var(--Brown800);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.instructions strong {
+  color: var(--Stone600);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--Stone150);
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--Stone150);
+}
+
+td:first-child {
+  color: var(--Stone600);
+}
+
+td:last-child {
+  color: var(--Brown800);
+  font-weight: 700;
+  padding-right: 1rem;
+  text-align: left;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  color: var(--Stone600);
+}
+
+.attribution a {
+  color: var(--Rose800);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
 }
